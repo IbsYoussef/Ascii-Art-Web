@@ -32,7 +32,7 @@ func handleInput(w http.ResponseWriter, r *http.Request) {
 	}
 
 	value := r.FormValue("fname")
-	banner := r.FormValue("styles")
+	// banner := r.FormValue("styles")
 	valueStruct := Formdata{
 		data: value,
 	}
@@ -44,6 +44,6 @@ func handleInput(w http.ResponseWriter, r *http.Request) {
 	}
 
 	tpl.Execute(w, valueStruct)
-	fmt.Fprintf(w, "%s ,%s", valueStruct.data, banner)
+	fmt.Fprintf(w, "%s", valueStruct.data)
 
 }
