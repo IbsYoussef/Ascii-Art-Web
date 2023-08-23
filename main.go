@@ -8,8 +8,7 @@ import (
 )
 
 type Formdata struct {
-	data   string
-	banner string
+	data string
 }
 
 func main() {
@@ -35,8 +34,7 @@ func handleInput(w http.ResponseWriter, r *http.Request) {
 	value := r.FormValue("fname")
 	banner := r.FormValue("styles")
 	valueStruct := Formdata{
-		data:   value,
-		banner: banner,
+		data: value,
 	}
 
 	tpl, err := template.ParseFiles("./templates/index.html")
@@ -46,6 +44,6 @@ func handleInput(w http.ResponseWriter, r *http.Request) {
 	}
 
 	tpl.Execute(w, valueStruct)
-	fmt.Fprintf(w, "%s ,%s", valueStruct.data, valueStruct.banner)
+	fmt.Fprintf(w, "%s ,%s", valueStruct.data, banner)
 
 }
