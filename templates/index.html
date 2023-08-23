@@ -3,39 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Webpage with Text Input</title>
+    <title>ASCII ART WEB GUI</title>
     <!-- Link your external CSS file here -->
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div id="pageTitle">GO ASCII ART</div>
-        <form action="/ascii-art" method="post">
-            <input type="text" id="textInput" name="text" placeholder="Enter text here">
-            <button type="button" id="button1" onclick="toggleButton('button1')">Standard</button>
-            <button type="button" id="button2" onclick="toggleButton('button2')">Shadow</button>
-            <button type="button" id="button3" onclick="toggleButton('button3')">Thinkertoy</button>
-            <button type="submit" id="submitButton">Submit</button>
-        </form>
-        <div id="displayBox"></div>
+
+    <form action="/process" method ="POST">
+
+    <div>
+        <label for="fname">TextArea</label>
+        <input type="text" id= "fname" name ="fname" placeholder="Input text">
     </div>
 
-    <script>
-        function toggleButton(buttonId) {
-            const button = document.getElementById(buttonId);
-            const buttons = document.getElementsByTagName("button");
-            
-            for (let i = 0; i < buttons.length; i++) {
-                // Remove the "selected" class from other buttons
-                if (buttons[i] !== button) {
-                    buttons[i].classList.remove("selected");
-                }
-            }
-            
-            button.classList.toggle("selected");
-        }
-    </script>
+    <div class="form-group">
+        <!-- This is a label element for the dropdown (select) element that follows.-->
+      <label for="styles">Choose your style:</label>
+      <select name="styles" id="styles">
+        <option value="standard" selected="standard">Standard</option>
+        <option value="shadow">Shadow</option>
+        <option value="thinkertoy">Thinkertoy</option>
+      </select>
+    </div>
+
+    <div>
+        <input type = "submit">
+    </div>
+
+    <h1>Input: {{.data}}</h1>
+
+    </form>
+
 </body>
 </html>
-
-
