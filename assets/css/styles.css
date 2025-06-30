@@ -1,0 +1,49 @@
+.ascii-art-title {
+    text-align: center;
+    color: rgb(11, 223, 223);
+}
+
+.gopher_lifting{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 20px; /* Add spacing from the top */
+    margin-right: 20px; /* Add spacing from the right */
+    max-width: 200px;
+}
+
+.gopher-swinging {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: -2%;
+    margin-left: 20px;
+    max-width: 200px;
+}
+
+.centered-image {
+    text-align: center;
+    margin-top: -20px; 
+}
+
+.Go-Computing {
+    display: inline-block;
+    margin: 0 auto; 
+}
+
+.text-area{
+    text-align: center;
+}
+
+.dropdown-table{
+    text-align: center;
+}
+
+.buttons{
+    text-align: center;
+}
+
+.gohtml{
+    text-align: center;
+    margin-top: 20px;
+}

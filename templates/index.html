@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII Art Web Generator</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <script src="/assets/js/script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="ascii-art-title">
+            <h1>(A)(S)(C)(I)(I)--(A)(R)(T)--(W)(E)(B)--(G)(E)(N)(E)(R)(A)(T)(O)(R)</h1>
+        </div>
+
+        <div class="centered-image">
+            <div class="Go-Computing">
+                <img src="/assets/img/Go-Computing.gif" alt="Middle Image" width="200">
+            </div>
+        </div>
+
+        <div class="gopher-swinging">
+            <img src="/assets/img/gophercises_jumping.gif" alt="Left Image" width="150">
+        </div>
+
+        <div class="gopher_lifting">
+            <img src="/assets/img/gopher_lifting_weights.gif" alt="Right Image" width="150">
+        </div>
+
+        <form id="ascii-art-form" action="/ascii-art" method="POST">
+            <div class="text-area">
+                <textarea id="textvalue" name="textvalue" rows="5" cols="40"
+                    placeholder="Enter your text here"></textarea>
+            </div>
+
+            <div class="dropdown-table">
+                <label for="banner">Choose your style:</label>
+                <select name="banner" id="banner">
+                    <option value="standard" selected>Standard</option>
+                    <option value="shadow">Shadow</option>
+                    <option value="thinkertoy">Thinkertoy</option>
+                </select>
+            </div>
+
+            <div class="buttons">
+                <input type="submit" value="Generate">
+                <input type="reset" value="Clear">
+                <button type="button" id="refreshButton">Refresh Page</button>
+            </div>
+        </form>
+
+        <div class="gohtml">
+            <pre><h1>{{.AsciiText}}</h1></pre>
+        </div>
+    </div>
+</body>
+
+</html>
