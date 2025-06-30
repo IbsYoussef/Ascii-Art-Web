@@ -11,6 +11,8 @@ type AsciiArt struct {
 }
 
 func AsciiHandler(w http.ResponseWriter, r *http.Request) {
+	enableCORS(w)
+
 	if r.Method != http.MethodPost {
 		http.Error(w, "404 Not Found", http.StatusNotFound)
 		return

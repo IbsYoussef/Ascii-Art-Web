@@ -17,3 +17,10 @@ func SetupRoutes() {
 	// Handle form submission
 	http.HandleFunc("/ascii-art", AsciiHandler)
 }
+
+// enableCORS is a middleware to enable CORS for all routes
+func enableCORS(w http.ResponseWriter) {
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	w.Header().Set("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+	w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
+}
