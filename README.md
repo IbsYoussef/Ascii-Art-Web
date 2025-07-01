@@ -74,7 +74,7 @@ This project is the web adaptation of my CLI-based ASCII Art tool, designed to b
 - ### 📦 Clone the Repository
 Clone the repository to your local machine:
 ```
-git clone https:#github.com/IbsYoussef/ascii-art-web.git
+git clone https://github.com/IbsYoussef/Ascii-Art-Web.git
 cd ascii-art-web
 ```
 
