@@ -86,7 +86,9 @@ Visit http:#localhost:9800 to access the web interface.
 
 ## 🌐 Live Demo
 
-Coming soon
+🔗 [ascii-art-web-dld5.onrender.com](https://ascii-art-web-dld5.onrender.com)
+
+⚠️ **Note:** This project is hosted on Render’s free tier. After 15 minutes of inactivity, the server may spin down. You may experience a short delay (up to ~30 seconds) when visiting the site while it boots back up.
 
 ## 🔭 Future Plans
 Here are a few enhancements I plan to add in future updates:
